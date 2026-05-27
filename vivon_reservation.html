@@ -19,375 +19,97 @@ body {
 
 .page { max-width: 480px; margin: 0 auto; }
 
-.header {
-  text-align: center;
-  margin-bottom: 48px;
-  animation: rise 0.8s ease both;
-}
-.header-sub {
-  font-size: 9px;
-  letter-spacing: 5px;
-  color: #b8943e;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-.header h1 {
-  font-family: 'Shippori Mincho B1', serif;
-  font-size: 24px;
-  color: #1a1208;
-  letter-spacing: 4px;
-  margin-bottom: 8px;
-}
-.header-note {
-  font-size: 11px;
-  color: #9a8a70;
-  letter-spacing: 2px;
-  line-height: 1.8;
-}
+.header { text-align: center; margin-bottom: 48px; animation: rise 0.8s ease both; }
+.header-sub { font-size: 9px; letter-spacing: 5px; color: #b8943e; text-transform: uppercase; margin-bottom: 12px; }
+.header h1 { font-family: 'Shippori Mincho B1', serif; font-size: 24px; color: #1a1208; letter-spacing: 4px; margin-bottom: 8px; }
+.header-note { font-size: 11px; color: #9a8a70; letter-spacing: 2px; line-height: 1.8; }
 
-.form-section {
-  margin-bottom: 32px;
-  animation: rise 0.8s ease both;
-}
+.form-section { margin-bottom: 32px; animation: rise 0.8s ease both; }
 .form-section:nth-child(2) { animation-delay: 0.1s; }
 .form-section:nth-child(3) { animation-delay: 0.2s; }
 .form-section:nth-child(4) { animation-delay: 0.3s; }
 .form-section:nth-child(5) { animation-delay: 0.4s; }
 .form-section:nth-child(6) { animation-delay: 0.5s; }
 
-.section-label {
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: #b8943e;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.section-label::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: #b8943e33;
-}
-.required {
-  font-size: 8px;
-  color: #c05050;
-  letter-spacing: 1px;
-  margin-left: 4px;
-}
+.section-label { font-size: 9px; letter-spacing: 3px; color: #b8943e; text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+.section-label::after { content: ''; flex: 1; height: 1px; background: #b8943e33; }
+.required { font-size: 8px; color: #c05050; letter-spacing: 1px; margin-left: 4px; }
+.field { margin-bottom: 16px; }
+.field-label { font-size: 11px; color: #6a5a40; letter-spacing: 1px; margin-bottom: 6px; display: flex; align-items: center; gap: 4px; }
+.req-mark { color: #c05050; font-size: 10px; }
 
-.field {
-  margin-bottom: 16px;
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+  width: 100%; background: #ffffff; border: 1px solid #d8c8a8; color: #2a1e10;
+  font-family: 'Noto Serif JP', serif; font-size: 13px; padding: 12px 14px;
+  outline: none; transition: border-color 0.2s; -webkit-appearance: none; appearance: none; border-radius: 0;
 }
-.field-label {
-  font-size: 11px;
-  color: #6a5a40;
-  letter-spacing: 1px;
-  margin-bottom: 6px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.req-mark {
-  color: #c05050;
-  font-size: 10px;
-}
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="date"]:focus, select:focus, textarea:focus { border-color: #b8943e; }
+input::placeholder, textarea::placeholder { color: #c0b090; font-size: 12px; }
+select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23b8943e'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; background-color: #ffffff; padding-right: 36px; cursor: pointer; }
+select option { background: #ffffff; color: #2a1e10; }
+textarea { resize: vertical; min-height: 100px; line-height: 1.8; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-select,
-textarea {
-  width: 100%;
-  background: #ffffff;
-  border: 1px solid #d8c8a8;
-  color: #2a1e10;
-  font-family: 'Noto Serif JP', serif;
-  font-size: 13px;
-  padding: 12px 14px;
-  outline: none;
-  transition: border-color 0.2s;
-  -webkit-appearance: none;
-  appearance: none;
-  border-radius: 0;
-}
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="date"]:focus,
-select:focus,
-textarea:focus {
-  border-color: #b8943e;
-}
-input::placeholder,
-textarea::placeholder {
-  color: #c0b090;
-  font-size: 12px;
-}
-select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23b8943e'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  background-color: #ffffff;
-  padding-right: 36px;
-  cursor: pointer;
-}
-select option {
-  background: #ffffff;
-  color: #2a1e10;
-}
-textarea {
-  resize: vertical;
-  min-height: 100px;
-  line-height: 1.8;
-}
+.concept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.concept-option { position: relative; }
+.concept-option input[type="radio"] { position: absolute; opacity: 0; width: 0; height: 0; }
+.concept-label { display: block; padding: 12px 14px; border: 1px solid #d8c8a8; background: #ffffff; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+.concept-option input:checked + .concept-label { border-color: #b8943e; background: #fdf6e8; }
+.concept-option input:checked + .concept-label .concept-name { color: #1a1208; }
+.concept-option input:checked + .concept-label .concept-sub-text { color: #6a5a40; }
+.concept-name { font-family: 'Shippori Mincho B1', serif; font-size: 12px; color: #3a2e20; line-height: 1.4; }
+.concept-sub-text { font-size: 9px; color: #a09070; margin-top: 2px; }
 
-.field-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
+.budget-display { text-align: center; font-family: 'Shippori Mincho B1', serif; font-size: 22px; color: #b8943e; letter-spacing: 2px; margin-bottom: 12px; }
+.budget-sub { font-size: 10px; color: #9a8a70; text-align: center; margin-top: -8px; margin-bottom: 12px; letter-spacing: 1px; }
+input[type="range"] { width: 100%; -webkit-appearance: none; appearance: none; background: transparent; cursor: pointer; }
+input[type="range"]::-webkit-slider-runnable-track { height: 2px; background: #d8c8a8; }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: #b8943e; margin-top: -7px; }
+input[type="range"]::-moz-range-track { height: 2px; background: #d8c8a8; }
+input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: #b8943e; border: none; }
+.budget-range-labels { display: flex; justify-content: space-between; font-size: 9px; color: #3a3020; letter-spacing: 1px; margin-top: 6px; }
 
-/* コンセプト選択 */
-.concept-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px;
-}
-.concept-option {
-  position: relative;
-}
-.concept-option input[type="checkbox"],
-.concept-option input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.concept-label {
-  display: block;
-  padding: 12px 14px;
-  border: 1px solid #d8c8a8;
-  background: #ffffff;
-  cursor: pointer;
-  transition: border-color 0.2s, background 0.2s;
-}
-.concept-option input:checked + .concept-label {
-  border-color: #b8943e;
-  background: #fdf6e8;
-}
-.concept-option input:checked + .concept-label .concept-num {
-  color: #b8943e;
-}
-.concept-option input:checked + .concept-label .concept-name {
-  color: #1a1208;
-}
-.concept-option input:checked + .concept-label .concept-sub-text {
-  color: #6a5a40;
-}
+.submit-wrap { margin-top: 40px; animation: rise 0.8s ease 0.6s both; }
+.submit-note { font-size: 10px; color: #9a8a70; letter-spacing: 1px; text-align: center; margin-bottom: 16px; line-height: 1.8; }
+.submit-btn { width: 100%; padding: 18px; background: transparent; border: 1px solid #b8943e; color: #b8943e; font-family: 'Shippori Mincho B1', serif; font-size: 14px; letter-spacing: 4px; cursor: pointer; transition: background 0.2s; }
+.submit-btn:hover { background: #b8943e11; }
+.submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
-.concept-num {
-  font-size: 9px;
-  color: #c0b090;
-  letter-spacing: 1px;
-  margin-bottom: 3px;
-}
-.concept-name {
-  font-family: 'Shippori Mincho B1', serif;
-  font-size: 12px;
-  color: #3a2e20;
-  line-height: 1.4;
-}
-.concept-sub-text {
-  font-size: 9px;
-  color: #a09070;
-  margin-top: 2px;
-}
-
-/* 予算スライダー */
-.budget-display {
-  text-align: center;
-  font-family: 'Shippori Mincho B1', serif;
-  font-size: 22px;
-  color: #b8943e;
-  letter-spacing: 2px;
-  margin-bottom: 12px;
-}
-.budget-sub {
-  font-size: 10px;
-  color: #9a8a70;
-  text-align: center;
-  margin-top: -8px;
-  margin-bottom: 12px;
-  letter-spacing: 1px;
-}
-input[type="range"] {
-  width: 100%;
-  -webkit-appearance: none;
-  appearance: none;
-  background: transparent;
-  cursor: pointer;
-}
-input[type="range"]::-webkit-slider-runnable-track {
-  height: 2px;
-  background: #d8c8a8;
-}
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #b8943e;
-  margin-top: -7px;
-}
-input[type="range"]::-moz-range-track {
-  height: 2px;
-  background: #d8c8a8;
-}
-input[type="range"]::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #c8a96e;
-  border: none;
-}
-.budget-range-labels {
-  display: flex;
-  justify-content: space-between;
-  font-size: 9px;
-  color: #3a3020;
-  letter-spacing: 1px;
-  margin-top: 6px;
-}
-
-/* 送信ボタン */
-.submit-wrap {
-  margin-top: 40px;
-  animation: rise 0.8s ease 0.6s both;
-}
-.submit-note {
-  font-size: 10px;
-  color: #9a8a70;
-  letter-spacing: 1px;
-  text-align: center;
-  margin-bottom: 16px;
-  line-height: 1.8;
-}
-.submit-btn {
-  width: 100%;
-  padding: 18px;
-  background: transparent;
-  border: 1px solid #b8943e;
-  color: #b8943e;
-  font-family: 'Shippori Mincho B1', serif;
-  font-size: 14px;
-  letter-spacing: 4px;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-.submit-btn:hover {
-  background: #b8943e11;
-}
-.submit-btn:active {
-  background: #b8943e22;
-}
-
-.thanks {
-  display: none;
-  text-align: center;
-  padding: 60px 20px;
-  animation: rise 0.8s ease both;
-}
-.thanks-icon {
-  font-size: 32px;
-  color: #b8943e;
-  margin-bottom: 20px;
-  font-family: 'Shippori Mincho B1', serif;
-}
-.thanks h2 {
-  font-family: 'Shippori Mincho B1', serif;
-  font-size: 20px;
-  color: #1a1208;
-  letter-spacing: 3px;
-  margin-bottom: 16px;
-}
-.thanks p {
-  font-size: 12px;
-  color: #6a5a40;
-  line-height: 2;
-  letter-spacing: 1px;
-}
-
+.thanks { display: none; text-align: center; padding: 60px 20px; animation: rise 0.8s ease both; }
+.thanks-icon { font-size: 32px; color: #b8943e; margin-bottom: 20px; }
+.thanks h2 { font-family: 'Shippori Mincho B1', serif; font-size: 20px; color: #1a1208; letter-spacing: 3px; margin-bottom: 16px; }
+.thanks p { font-size: 12px; color: #6a5a40; line-height: 2; letter-spacing: 1px; }
 .sep { height: 1px; background: #e8dcc8; margin: 32px 0; }
 
-@keyframes rise {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+@keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 </style>
 </head>
 <body>
 <div class="page">
-
   <div class="header">
     <div class="header-sub">VIVON BRIDAL JEWELLERY</div>
     <h1>ご予約・お問い合わせ</h1>
-    <div class="header-note">
-      完全予約制 / 一組限定<br>
-      お客様のキーワードから、世界に一つの指輪を
-    </div>
+    <div class="header-note">完全予約制 / 一組限定<br>お客様のキーワードから、世界に一つの指輪を</div>
   </div>
-
   <div id="form-area">
-
-    <!-- お名前 -->
     <div class="form-section">
       <div class="section-label">お名前 <span class="required">必須</span></div>
       <div class="field-row">
-        <div class="field">
-          <div class="field-label"><span class="req-mark">*</span> お名前（姓）</div>
-          <input type="text" id="last-name" placeholder="山田">
-        </div>
-        <div class="field">
-          <div class="field-label"><span class="req-mark">*</span> お名前（名）</div>
-          <input type="text" id="first-name" placeholder="花子">
-        </div>
+        <div class="field"><div class="field-label"><span class="req-mark">*</span> お名前（姓）</div><input type="text" id="last-name" placeholder="山田"></div>
+        <div class="field"><div class="field-label"><span class="req-mark">*</span> お名前（名）</div><input type="text" id="first-name" placeholder="花子"></div>
       </div>
     </div>
-
-    <!-- 連絡先 -->
     <div class="form-section">
       <div class="section-label">ご連絡先 <span class="required">必須</span></div>
-      <div class="field">
-        <div class="field-label"><span class="req-mark">*</span> 電話番号</div>
-        <input type="tel" id="phone" placeholder="090-0000-0000">
-      </div>
-      <div class="field">
-        <div class="field-label"><span class="req-mark">*</span> メールアドレス</div>
-        <input type="email" id="email" placeholder="example@email.com">
-      </div>
-      <div class="field">
-        <div class="field-label">Instagram ID</div>
-        <input type="text" id="instagram" placeholder="@vivon_jewellery_art">
-      </div>
+      <div class="field"><div class="field-label"><span class="req-mark">*</span> 電話番号</div><input type="tel" id="phone" placeholder="090-0000-0000"></div>
+      <div class="field"><div class="field-label"><span class="req-mark">*</span> メールアドレス</div><input type="email" id="email" placeholder="example@email.com"></div>
+      <div class="field"><div class="field-label">Instagram ID</div><input type="text" id="instagram" placeholder="@vivon_jewellery_art"></div>
     </div>
-
-    <!-- 来店希望 -->
     <div class="form-section">
       <div class="section-label">ご来店希望 <span class="required">必須</span></div>
-      <div class="field">
-        <div class="field-label"><span class="req-mark">*</span> 第一希望日</div>
-        <input type="date" id="date1">
-      </div>
-      <div class="field">
-        <div class="field-label">第二希望日</div>
-        <input type="date" id="date2">
-      </div>
-      <div class="field">
-        <div class="field-label">ご希望の時間帯</div>
+      <div class="field"><div class="field-label"><span class="req-mark">*</span> 第一希望日</div><input type="date" id="date1"></div>
+      <div class="field"><div class="field-label">第二希望日</div><input type="date" id="date2"></div>
+      <div class="field"><div class="field-label">ご希望の時間帯</div>
         <select id="time">
           <option value="">選択してください</option>
           <option>午前（10:00〜12:00）</option>
@@ -396,136 +118,70 @@ input[type="range"]::-moz-range-thumb {
         </select>
       </div>
     </div>
-
-    <!-- 予算 -->
     <div class="form-section">
       <div class="section-label">ご予算（2本合計）</div>
       <div class="budget-display" id="budget-display">30万円</div>
       <div class="budget-sub">スライドで選択</div>
       <input type="range" id="budget-slider" min="0" max="8" value="1" step="1">
-      <div class="budget-range-labels">
-        <span>20万〜</span>
-        <span>〜150万以上</span>
-      </div>
+      <div class="budget-range-labels"><span>20万〜</span><span>〜150万以上</span></div>
     </div>
-
-    <!-- 来店目的 -->
     <div class="form-section">
       <div class="section-label">来店の目的 <span class="required">必須</span></div>
       <div class="concept-grid">
-        <div class="concept-option">
-          <input type="radio" id="p1" name="purpose" value="見に来るだけ">
-          <label class="concept-label" for="p1">
-            <div class="concept-name">見に来るだけ</div>
-            <div class="concept-sub-text">まずは雰囲気を感じたい</div>
-          </label>
-        </div>
-        <div class="concept-option">
-          <input type="radio" id="p2" name="purpose" value="制作の流れを知りたい">
-          <label class="concept-label" for="p2">
-            <div class="concept-name">制作の流れを知りたい</div>
-            <div class="concept-sub-text">どう作るか聞いてみたい</div>
-          </label>
-        </div>
-        <div class="concept-option">
-          <input type="radio" id="p3" name="purpose" value="デザイナーと話してみたい">
-          <label class="concept-label" for="p3">
-            <div class="concept-name">デザイナーと話してみたい</div>
-            <div class="concept-sub-text">どんな人か会ってみたい</div>
-          </label>
-        </div>
-        <div class="concept-option">
-          <input type="radio" id="p4" name="purpose" value="デザインを相談したい">
-          <label class="concept-label" for="p4">
-            <div class="concept-name">デザインを相談したい</div>
-            <div class="concept-sub-text">イメージを一緒に作りたい</div>
-          </label>
-        </div>
+        <div class="concept-option"><input type="radio" id="p1" name="purpose" value="見に来るだけ"><label class="concept-label" for="p1"><div class="concept-name">見に来るだけ</div><div class="concept-sub-text">まずは雰囲気を感じたい</div></label></div>
+        <div class="concept-option"><input type="radio" id="p2" name="purpose" value="制作の流れを知りたい"><label class="concept-label" for="p2"><div class="concept-name">制作の流れを知りたい</div><div class="concept-sub-text">どう作るか聞いてみたい</div></label></div>
+        <div class="concept-option"><input type="radio" id="p3" name="purpose" value="デザイナーと話してみたい"><label class="concept-label" for="p3"><div class="concept-name">デザイナーと話してみたい</div><div class="concept-sub-text">どんな人か会ってみたい</div></label></div>
+        <div class="concept-option"><input type="radio" id="p4" name="purpose" value="デザインを相談したい"><label class="concept-label" for="p4"><div class="concept-name">デザインを相談したい</div><div class="concept-sub-text">イメージを一緒に作りたい</div></label></div>
       </div>
     </div>
-
-    <!-- 想い・キーワード -->
     <div class="form-section">
       <div class="section-label">お二人のキーワード</div>
-      <div class="field">
-        <div class="field-label">どんな指輪にしたいか、イメージや想いを自由に</div>
-        <textarea id="message" placeholder="例：シンプルだけど他にはないもの、沖縄らしさを感じる指輪、二人だけの秘密のデザインを入れたい…など、どんな言葉でも構いません"></textarea>
-      </div>
+      <div class="field"><div class="field-label">どんな指輪にしたいか、イメージや想いを自由に</div><textarea id="message" placeholder="例：シンプルだけど他にはないもの、沖縄らしさを感じる指輪…など"></textarea></div>
     </div>
-
-    <!-- その他お問い合わせ -->
     <div class="form-section">
       <div class="section-label">その他お問い合わせ</div>
-      <div class="field">
-        <div class="field-label">ご質問・気になることがあればお気軽にどうぞ</div>
-        <textarea id="inquiry" placeholder="例：駐車場はありますか？オンラインでの相談は可能ですか？など"></textarea>
-      </div>
+      <div class="field"><div class="field-label">ご質問・気になることがあればお気軽にどうぞ</div><textarea id="inquiry" placeholder="例：駐車場はありますか？オンラインでの相談は可能ですか？など"></textarea></div>
     </div>
-
     <div class="sep"></div>
-
     <div class="submit-wrap">
       <div class="submit-note">
-        ご予約確認後、2営業日以内にご連絡いたします<br>
-        完全予約制 / 一組ずつ丁寧にご対応いたします<br><br>
+        ご予約確認後、2営業日以内にご連絡いたします<br>完全予約制 / 一組ずつ丁寧にご対応いたします<br><br>
         数日経っても返答がない場合は<br>
         Instagram DM（<a href="https://www.instagram.com/vivon_jewellery_art/" target="_blank" style="color:#b8943e;">@vivon_jewellery_art</a>）または<br>
         <a href="mailto:vivon2013@gmail.com" style="color:#b8943e;">vivon2013@gmail.com</a> までご連絡ください
       </div>
       <button class="submit-btn" onclick="handleSubmit()">予約を送信する</button>
     </div>
-
   </div>
-
-  <!-- 完了画面 -->
   <div class="thanks" id="thanks-area">
     <div class="thanks-icon">✦</div>
     <h2>ありがとうございます</h2>
-    <p>
-      ご予約を受け付けました<br><br>
-      2営業日以内にご連絡いたします<br>
-      しばらくお待ちください<br><br>
-      VIVON BRIDAL JEWELLERY
-    </p>
+    <p>ご予約を受け付けました<br><br>2営業日以内にご連絡いたします<br>しばらくお待ちください<br><br>VIVON BRIDAL JEWELLERY</p>
   </div>
-
 </div>
-
 <script>
-const budgetValues = ['20万円以下', '30万円', '40万円', '50万円', '60〜70万円', '80〜100万円', '100〜120万円', '120〜150万円', '150万円以上'];
-const slider = document.getElementById('budget-slider');
-const display = document.getElementById('budget-display');
-
-slider.addEventListener('input', () => {
-  display.textContent = budgetValues[parseInt(slider.value)];
-});
-
-function handleSubmit() {
+const budgetValues = ['20万円以下','30万円','40万円','50万円','60〜70万円','80〜100万円','100〜120万円','120〜150万円','150万円以上'];
+document.getElementById('budget-slider').addEventListener('input', function(){ document.getElementById('budget-display').textContent = budgetValues[parseInt(this.value)]; });
+async function handleSubmit() {
   const lastName = document.getElementById('last-name').value.trim();
   const firstName = document.getElementById('first-name').value.trim();
   const phone = document.getElementById('phone').value.trim();
-  const date1 = document.getElementById('date1').value;
-
-  if (!lastName || !firstName) {
-    alert('お名前をご入力ください');
-    return;
-  }
-  if (!phone) {
-    alert('電話番号をご入力ください');
-    return;
-  }
   const email = document.getElementById('email').value.trim();
-  if (!email) {
-    alert('メールアドレスをご入力ください');
-    return;
-  }
-  if (!date1) {
-    alert('第一希望日をご選択ください');
-    return;
-  }
-
-  document.getElementById('form-area').style.display = 'none';
-  document.getElementById('thanks-area').style.display = 'block';
+  const date1 = document.getElementById('date1').value;
+  const purpose = document.querySelector('input[name="purpose"]:checked');
+  if (!lastName || !firstName) { alert('お名前をご入力ください'); return; }
+  if (!phone) { alert('電話番号をご入力ください'); return; }
+  if (!email) { alert('メールアドレスをご入力ください'); return; }
+  if (!date1) { alert('第一希望日をご選択ください'); return; }
+  const slider = document.getElementById('budget-slider');
+  const data = { お名前: lastName+' '+firstName, 電話番号: phone, メールアドレス: email, Instagram: document.getElementById('instagram').value.trim(), 第一希望日: date1, 第二希望日: document.getElementById('date2').value, 時間帯: document.getElementById('time').value, 予算: budgetValues[parseInt(slider.value)], 来店目的: purpose ? purpose.value : '未選択', キーワード: document.getElementById('message').value.trim(), その他: document.getElementById('inquiry').value.trim() };
+  const btn = document.querySelector('.submit-btn');
+  btn.textContent = '送信中...'; btn.disabled = true;
+  try {
+    const response = await fetch('https://formspree.io/f/mykvbaep', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) });
+    if (response.ok) { document.getElementById('form-area').style.display = 'none'; document.getElementById('thanks-area').style.display = 'block'; }
+    else { alert('送信に失敗しました。もう一度お試しください。'); btn.textContent = '予約を送信する'; btn.disabled = false; }
+  } catch { alert('通信エラーが発生しました。'); btn.textContent = '予約を送信する'; btn.disabled = false; }
 }
 </script>
 </body>
