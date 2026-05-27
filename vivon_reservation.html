@@ -366,7 +366,7 @@ input[type="range"]::-moz-range-thumb {
         <input type="tel" id="phone" placeholder="090-0000-0000">
       </div>
       <div class="field">
-        <div class="field-label">メールアドレス</div>
+        <div class="field-label"><span class="req-mark">*</span> メールアドレス</div>
         <input type="email" id="email" placeholder="example@email.com">
       </div>
       <div class="field">
@@ -453,12 +453,24 @@ input[type="range"]::-moz-range-thumb {
       </div>
     </div>
 
+    <!-- その他お問い合わせ -->
+    <div class="form-section">
+      <div class="section-label">その他お問い合わせ</div>
+      <div class="field">
+        <div class="field-label">ご質問・気になることがあればお気軽にどうぞ</div>
+        <textarea id="inquiry" placeholder="例：駐車場はありますか？オンラインでの相談は可能ですか？など"></textarea>
+      </div>
+    </div>
+
     <div class="sep"></div>
 
     <div class="submit-wrap">
       <div class="submit-note">
         ご予約確認後、2営業日以内にご連絡いたします<br>
-        完全予約制 / 一組ずつ丁寧にご対応いたします
+        完全予約制 / 一組ずつ丁寧にご対応いたします<br><br>
+        数日経っても返答がない場合は<br>
+        Instagram DM（<a href="https://www.instagram.com/vivon_jewellery_art/" target="_blank" style="color:#b8943e;">@vivon_jewellery_art</a>）または<br>
+        <a href="mailto:vivon2013@gmail.com" style="color:#b8943e;">vivon2013@gmail.com</a> までご連絡ください
       </div>
       <button class="submit-btn" onclick="handleSubmit()">予約を送信する</button>
     </div>
@@ -500,6 +512,11 @@ function handleSubmit() {
   }
   if (!phone) {
     alert('電話番号をご入力ください');
+    return;
+  }
+  const email = document.getElementById('email').value.trim();
+  if (!email) {
+    alert('メールアドレスをご入力ください');
     return;
   }
   if (!date1) {
